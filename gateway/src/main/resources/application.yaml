@@ -1,0 +1,35 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: gateway
+
+zuul:
+  ignoredServices: '*'
+  sensitiveHeaders: Cookie, Set-Cookie
+
+  routes:
+    accounts-service:
+      path: /api/v1/accounts/**
+      url: http://localhost:8082/api/v1/accounts
+#      serviceId: accounts-service
+#      stripPrefix: false
+
+
+    customers-service:
+      path: /api/v1/customers/**
+      url: http://localhost:8081/api/v1/customers
+#      serviceId: customers-service
+#      stripPrefix: false
+
+#accounts-service:
+#  ribbon:
+#    listOfServers: http://localhost:8082
+#
+#customers-service:
+#  ribbon:
+#    listOfServers: http://localhost:8081
+
+
+
