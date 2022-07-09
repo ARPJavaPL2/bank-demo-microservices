@@ -1,15 +1,14 @@
 package com.sda.accounts.services;
 
 
+import com.sda.accounts.httpclients.CustomersClient;
+import com.sda.accounts.repositories.AccountsRepository;
 import com.sda.commons.dto.AccountDto;
 import com.sda.commons.dto.CustomerDto;
-import com.sda.accounts.httpclients.CustomersClient;
 import com.sda.commons.mappers.AccountsMapper;
 import com.sda.commons.mappers.CustomersMapper;
 import com.sda.commons.models.Account;
 import com.sda.commons.models.Customer;
-import com.sda.accounts.repositories.AccountsRepository;
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

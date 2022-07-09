@@ -1,9 +1,8 @@
 package com.sda.accounts.controllers;
 
 
-import com.sda.commons.dto.AccountDto;
 import com.sda.accounts.services.AccountsService;
-
+import com.sda.commons.dto.AccountDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +18,7 @@ public class AccountsController {
 
     @GetMapping("customer/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public List<AccountDto> getByCustomerId(@PathVariable  Long id) {
+    public List<AccountDto> getByCustomerId(@PathVariable Long id) {
         return accountsService.getAccountsByCustomerId(id);
     }
 

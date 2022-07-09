@@ -12,14 +12,14 @@ public class ErrorHandler {
 
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<String> handleResourceNotFound(ResourceNotFoundException ex) {
-      log.error("ResourceNotFoundException: {}", ex.getMessage());
-      return new ResponseEntity<>(ex.getMessage(), ex.getHttpStatus());
+        log.error("ResourceNotFoundException: {}", ex.getMessage());
+        return new ResponseEntity<>(ex.getMessage(), ex.getHttpStatus());
     }
 
     @ExceptionHandler(ResourceValidationException.class)
     public ResponseEntity<String> handleResourceValidation(ResourceValidationException ex) {
-      log.error("ResourceValidationException: {}", ex.getMessage());
-      return new ResponseEntity<>(ex.getMessage(), HttpStatus.CONFLICT);
+        log.error("ResourceValidationException: {}", ex.getMessage());
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.CONFLICT);
     }
 
 }

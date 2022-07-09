@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 public class GatewayApplication {
 
     @Bean
-    public SimpleFilter getSimpleFilter(){
+    public SimpleFilter getSimpleFilter() {
         return new SimpleFilter();
     }
 
