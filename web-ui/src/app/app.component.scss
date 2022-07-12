@@ -1,0 +1,23 @@
+
+:host{
+    width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas: "navbar-row" "main-row" "footer-row";
+}
+
+.navbar-row {
+  grid-area: navbar-row;
+}
+
+.main-row {
+  grid-area: main-row;
+}
+
+.footer-row {
+  grid-area: footer-row;
+}

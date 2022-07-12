@@ -1,0 +1,46 @@
+<div class="container-fluid h-100 ">
+
+  <div class="grid-container h-100">
+
+    <section class="row navbar-row">
+      <nav class="navbar navbar-dark bg-dark p-3">
+        <a class="navbar-brand">
+          <fa-icon class="text-danger pe-2" [icon]="faCoffee"></fa-icon> <span class="text-danger">SDA</span> - Bank Demo 
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/customers">Customers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/accounts">Accounts</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <main class="row main-row">
+      <router-outlet></router-outlet>
+    </main>
+
+    <footer class="row footer-row bg-dark text-white text-center p-1">
+      <span class="small">Made with  
+        <fa-icon class="text-danger ps-1 pe-1" [icon]="faHeart"></fa-icon>
+        by SDA
+      </span>
+    </footer>
+
+  </div>
+</div>
